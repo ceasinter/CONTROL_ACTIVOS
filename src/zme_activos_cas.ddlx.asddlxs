@@ -4,30 +4,42 @@ annotate entity zc_activos_cas with
   @UI.hidden: true
   AssetUUID;
   @EndUserText.label: 'Cód. Activo'
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
   AssetCode;
   @EndUserText.label: 'Tipo Activo'
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
   AssetTypeUUID;
   @EndUserText.label: 'Descripción'
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
   Description;
   @EndUserText.label: 'Categoría'
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
   CategoryUUID;
   @EndUserText.label: 'Marca'
+  @UI.lineItem: [{ position: 50, importance: #HIGH }]
   Manufacturer;
   @EndUserText.label: 'Modelo'
+  @UI.lineItem: [{ position: 60, importance: #HIGH }]
   Model;
   @EndUserText.label: 'Serial No.'
+  @UI.lineItem: [{ position: 70, importance: #HIGH }]
   SerialNumber;
   @EndUserText.label: 'Fecha Adq.'
+  @UI.lineItem: [{ position: 80, importance: #HIGH }]
   AcquisitionDate;
   @EndUserText.label: 'Costo'
+  @UI.lineItem: [{ position: 90, importance: #HIGH }]
   PurchaseCost;
   @EndUserText.label: 'Moneda'
+  @UI.lineItem: [{ position: 100, importance: #HIGH }]
   CurrencyCode;
   @EndUserText.label: 'Localización'
   Location;
   @EndUserText.label: 'Técnico Asign.'
+  @UI.lineItem: [{ position: 110, importance: #HIGH }]
   AssignedUser;
   @EndUserText.label: 'Estátus'
+  @UI.lineItem: [{ position: 120, importance: #HIGH }]
   Status;
   @EndUserText.label: 'Venc. Garantía'
   WarrantyEndDate;
