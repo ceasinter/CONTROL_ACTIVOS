@@ -5,9 +5,11 @@ annotate entity zc_activos_cas with
   AssetUUID;
   @EndUserText.label: 'Cód. Activo'
   @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  @UI.selectionField: [{ position: 10 }]
   AssetCode;
   @EndUserText.label: 'Tipo Activo'
   @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  @UI.selectionField: [{ position:  20 }]
   AssetTypeUUID;
   @EndUserText.label: 'Descripción'
   @UI.lineItem: [{ position: 30, importance: #HIGH }]
