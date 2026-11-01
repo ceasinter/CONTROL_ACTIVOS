@@ -1,0 +1,29 @@
+@Metadata.layer: #CORE
+annotate entity zc_mnt_activos_cas with
+{
+  @UI.hidden: true
+  MaintUUID;
+  @UI.hidden: true
+  AssetUUID;
+  @EndUserText.label: 'Tipo Mant.'
+  MaintType;
+  @EndUserText.label: 'Descripción'
+  Description;
+  @EndUserText.label: 'Fecha Exped.'
+  ScheduleDate;
+  @EndUserText.label: 'Fecha Complet'
+  CompletedDate;
+  @EndUserText.label: 'Técnico'
+  Technician;
+  @EndUserText.label: 'Estátus'
+  MaintStatus;
+  @EndUserText.label: 'Precio'
+  Cost;
+  @EndUserText.label: 'Moneda'
+  CurrencyCode;
+  @EndUserText.label: 'Notas'
+  Notes;
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

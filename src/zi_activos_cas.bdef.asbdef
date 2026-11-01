@@ -1,0 +1,18 @@
+interface;
+
+define behavior for zi_activos_cas alias Activos
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Mantenimiento { create; }
+}
+
+define behavior for zi_mnt_activos_cas alias MaintSchedule
+{
+  use update;
+  use delete;
+
+  use association _Activos;
+}

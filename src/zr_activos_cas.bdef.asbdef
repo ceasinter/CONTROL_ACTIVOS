@@ -1,0 +1,74 @@
+managed;
+strict ( 2 );
+
+define behavior for zr_activos_cas alias Activos
+implementation in class zbp_r_activos_cas unique
+persistent table zactivos_cas
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly, numbering : managed ) AssetUUID;
+  association _Mantenimiento { create; }
+
+  mapping for zactivos_cas
+    {
+      AssetUUID           = asset_uuid;
+      AssetCode           = asset_code;
+      AssetTypeUUID       = asset_type;
+      Description         = description;
+      CategoryUUID        = category;
+      Manufacturer        = manufacturer;
+      Model               = model;
+      SerialNumber        = serial_number;
+      AcquisitionDate     = acquisition_date;
+      PurchaseCost        = purchase_cost;
+      CurrencyCode        = currency_code;
+      Location            = location;
+      AssignedUser        = assigned_user;
+      Status              = status;
+      WarrantyEndDate     = warranty_end_date;
+      Criticality         = criticality;
+      LastMaintenanceDate = last_maintenance_date;
+      NextMaintenanceDate = next_maintenance_date;
+      CreatedBy           = created_by;
+      CreatedAt           = created_at;
+      LastChangedBy       = last_changed_by;
+      LastChangedAt       = last_changed_at;
+      LocalLastChangedAt  = local_last_changed_at;
+    }
+}
+
+define behavior for zr_mnt_activos_cas alias MaintSchedule
+implementation in class zbp_r_mnt_activos_cas unique
+persistent table zmnt_activos_cas
+lock dependent by _Activos
+authorization dependent by _Activos
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering : managed ) MaintUUID;
+  field ( readonly ) AssetUUID;
+  association _Activos;
+
+  mapping for zmnt_activos_cas
+    {
+      MaintUUID          = maint_uuid;
+      AssetUUID          = asset_parent_uuid;
+      MaintType          = maint_type;
+      Description        = description;
+      ScheduleDate       = schedule_date;
+      CompletedDate      = completed_date;
+      Technician         = technician;
+      MaintStatus        = maint_status;
+      Cost               = cost;
+      CurrencyCode       = currency_code;
+      Notes              = notes;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+
+}

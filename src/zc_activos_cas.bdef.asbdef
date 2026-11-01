@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+
+define behavior for zc_activos_cas alias Activos
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Mantenimiento { create; }
+}
+
+define behavior for zc_mnt_activos_cas alias MaintSchedule
+{
+  use update;
+  use delete;
+
+  use association _Activos;
+}

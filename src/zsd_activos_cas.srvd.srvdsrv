@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition Activos'
+define service ZSD_ACTIVOS_CAS {
+  expose zc_activos_cas     as Activos;
+  expose zc_mnt_activos_cas as MaintSchedule;
+}

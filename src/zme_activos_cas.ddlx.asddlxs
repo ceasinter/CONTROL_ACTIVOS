@@ -1,0 +1,43 @@
+@Metadata.layer: #CORE
+annotate entity zc_activos_cas with
+{
+  @UI.hidden: true
+  AssetUUID;
+  @EndUserText.label: 'Cód. Activo'
+  AssetCode;
+  @EndUserText.label: 'Tipo Activo'
+  AssetTypeUUID;
+  @EndUserText.label: 'Descripción'
+  Description;
+  @EndUserText.label: 'Categoría'
+  CategoryUUID;
+  @EndUserText.label: 'Marca'
+  Manufacturer;
+  @EndUserText.label: 'Modelo'
+  Model;
+  @EndUserText.label: 'Serial No.'
+  SerialNumber;
+  @EndUserText.label: 'Fecha Adq.'
+  AcquisitionDate;
+  @EndUserText.label: 'Costo'
+  PurchaseCost;
+  @EndUserText.label: 'Moneda'
+  CurrencyCode;
+  @EndUserText.label: 'Localización'
+  Location;
+  @EndUserText.label: 'Técnico Asign.'
+  AssignedUser;
+  @EndUserText.label: 'Estátus'
+  Status;
+  @EndUserText.label: 'Venc. Garantía'
+  WarrantyEndDate;
+  @EndUserText.label: 'Criticidad'
+  Criticality;
+  @EndUserText.label: 'Últ. Mant'
+  LastMaintenanceDate;
+  @EndUserText.label: 'Prox. Mant'
+  NextMaintenanceDate;
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}
